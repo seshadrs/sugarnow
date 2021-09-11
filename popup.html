@@ -1,0 +1,69 @@
+<html>
+<head>
+  <title>Sugarmate BG Indicator (Unofficial)</title>
+  <style>
+    div {
+      width: 290;
+      margin: 0;
+      padding: 0;
+    }
+
+    #sugarNowImage {
+      width: 70px;
+      height: 70px;
+      margin: 5px;
+    }
+    button {
+      margin: 5px;
+      outline: none;
+    }
+  #bgGrad {
+    height: 200px;
+    background-color: pink; /* For browsers that do not support gradients */
+    background-image: linear-gradient(pink, white);
+  }
+  </style>
+
+</head>
+<body >
+  <div id="bgGrad">
+    <center>
+    <table>
+      <tr>
+        <td> <img src='./sugar_now.png' id='sugarNowImage'> </td>
+        <td> <h2> <br/>Sugar Now </h2> </td>
+      </tr>
+    </table> <br/>
+      
+      
+      <b>Step 1.</b> In your Sugarmate app settings <a href="https://sugarmate.io/home/settings" target="_blank"> here </a> make sure the <i>External JSON URL</i> feature is turned on. <br/> 
+      <b>Step 2.</b> Copy and paste the URL into the textbox below and hit save. <br/><br/>
+
+      <!-- TODO: Option to specify polling frequency in minutes: 2/5/10min -->
+      <!-- TODO: Option to use browser alerts() when BG is too low/high -->
+
+      <input type="text" size="25" placeholder="Sugarmate URL goes here" id="jsonUrl" name="json_url"> &nbsp;
+      <p>Please select your preferred unit for display:</p>
+      <div>
+        <input type="radio" id="mgdl" name="unit" value="mgdl">
+        <label for="mgdl">mg/dL</label>
+        <input type="radio" id="mmol" name="unit" value="mmol">
+        <label for="mgdl">mmol</label>
+      </div>
+
+      <button id='saveConfig' style="background-color:silver" value='0.1'><b>SAVE</b></button> <br/>
+      <p id="latestBGRes" style="color:gray"> Last known reading shown here </p> 
+
+    </center> 
+
+    <p style="text-align:center"> <i> made with love by <a href="https://seshadri.xyz" target="_blank">seshadri.xyz</a> </i> </p>
+    <hr style="height:2px; visibility:hidden;" />
+
+    <!-- link to non-persistent background script -->
+    <script src="popup.js"></script>
+  </div>
+</body>
+
+<!-- TODO: Motivational quote -->
+
+</html>
